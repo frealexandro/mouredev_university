@@ -1,36 +1,30 @@
-"""Welcome to Reflex! This file outlines the steps to create a basic app."""
-
-from rxconfig import config
-
+# import sys
+# sys.path.append('/home/frealexandro/proyectos_personales/mouredev_university')
 import reflex as rx
-
-docs_url = "https://reflex.dev/docs/getting-started/introduction/"
-filename = f"{config.app_name}/{config.app_name}.py"
+from mouredev_university.styles.styles import styles
 
 
-class State(rx.State):
-    """The app state."""
 
+def index( ) -> rx.Component:
+    return rx.box(
 
-def index() -> rx.Component:
-    return rx.center(
-        rx.theme_panel(),
-        rx.vstack(
-            rx.heading("Welcome to Reflex!", size="9"),
-            rx.text("Get started by editing ", rx.code(filename)),
-            rx.button(
-                "Check out our docs!",
-                on_click=lambda: rx.redirect(docs_url),
-                size="4",
-            ),
-            rx.logo(),
-            align="center",
-            spacing="7",
-            font_size="2em",
-        ),
-        height="100vh",
     )
 
 
-app = rx.App()
-app.add_page(index)
+
+app = rx.App(
+    styles=styles.STYLESHEET,
+    style= styles.BASE_STYLE,
+
+)
+
+
+
+app.add_page(index,
+             title="Mouredev University",
+             description="this is a university website free to learn",
+             
+             
+             )
+
+app.compile()
