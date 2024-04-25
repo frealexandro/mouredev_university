@@ -1,8 +1,8 @@
 # import sys
 # sys.path.append('/home/frealexandro/proyectos_personales/mouredev_university')
 import reflex as rx
-from mouredev_university.styles.styles import styles
-
+from mouredev_university.styles.styles import BASE_STYLE
+from mouredev_university.styles.styles import STYLESHEET
 
 
 def index( ) -> rx.Component:
@@ -13,8 +13,8 @@ def index( ) -> rx.Component:
 
 
 app = rx.App(
-    styles=styles.STYLESHEET,
-    style= styles.BASE_STYLE,
+    stylesheets = STYLESHEET,
+    style= BASE_STYLE,
 
 )
 
@@ -27,4 +27,3 @@ app.add_page(index,
              
              )
 
-app.compile()
