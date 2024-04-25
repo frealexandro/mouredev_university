@@ -1,19 +1,24 @@
-import reflex as rx 
-from mouredev_university.styles.colors import TextColor
-from mouredev_university.styles.colors import Color
-from mouredev_university.styles.fonts import Font
+import reflex as rx
+from enum import Enum
+from .colors import Color, TextColor
+from .fonts import Font, FontWeight
 
-STYLESHEET = [
+# Constants
+MAX_WIDTH = "560px"
+FADEIN_ANIMATION = "animate__animated animate__fadeIn"
+BOUNCEIN_ANIMATION = "animate__animated animate__bounceIn"
 
-    #fuente de google fonts
-    "https://fonts.googleapis.com/css?family=Jersey+15&display=swap",
+# Sizes
+
+STYLESHEETS = [
+    "https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap",
+    "https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap",
+    "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
+    "/css/styles.css"
 ]
 
-print(Color.PRIMARY.value)
-
 BASE_STYLE = {
-    "font-family": Font.DEFAULT.value,
-    "color":  TextColor.PRIMARY.value,
-    "background-color": Color.PRIMARY.value,
-
+    "font_family": Font.DEFAULT.value,
+    "font_weight": FontWeight.LIGHT.value,
+    "background_color": Color.BACKGROUND.value,
 }

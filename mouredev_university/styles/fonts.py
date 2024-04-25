@@ -1,6 +1,12 @@
 from enum import Enum
 
+
 class Font(Enum):
-    
-    # fuente principal
-    DEFAULT = 'Jersey 15'
+    DEFAULT = "Poppins"
+    TITLE = "Poppins"
+    LOGO = "Comfortaa"
+
+
+class FontWeight(Enum):
+    LIGHT = "300"
+    MEDIUM = "500"

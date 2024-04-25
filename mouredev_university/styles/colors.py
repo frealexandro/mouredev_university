@@ -1,26 +1,15 @@
 from enum import Enum
 
+
 class Color(Enum):
-    # azul oscuro celeste
-    ACCENT = '#007bff'
-
-    # girs oscuro
-    PRIMARY = '#212529'
-
-    # gris oscuro claro
-    SECONDARY = '#f8f9fa'
-
+    PRIMARY = "#14A1F0"
+    SECONDARY = "#087ec4"
+    BACKGROUND = "#0C151D"
+    CONTENT = "#171F26",
+    PURPLE = "#9146ff"
 
 
 class TextColor(Enum):
-    # azul oscuro celeste
-    ACCENT = '#007bff'
-
-    # blanco
-    PRIMARY = '#ffffff'
-
-    # gris oscuro 
-    SECONDARY = '#6c757d'
-    
-    # gris oscuro claro
-    TERTIARY = '#f8f9fa'
+    HEADER = "#F1F2F4"
+    BODY = "#C3C7CB"
+    FOOTER = "#A3ABB2"
