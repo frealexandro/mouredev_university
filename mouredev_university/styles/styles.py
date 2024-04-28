@@ -31,3 +31,17 @@ class Size(Enum):
     LARGE = "1.5em"
     BIG = "2em"
     VERY_BIG = "4em"
+    HUGE = "20em"
+
+
+navbar_title_style = dict(
+    font_family=Font.LOGO.value,
+    font_weight=FontWeight.MEDIUM.value,
+    font_size=Size.LARGE.value
+)
+
+input_style = dict(
+    font_family=Font.LOGO.value,
+    font_weight=FontWeight.MEDIUM.value,
+    font_size=Size.MEDIUM.value
+)

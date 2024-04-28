@@ -1,19 +1,44 @@
 import reflex as rx
-import link_bio.styles.styles as styles
-from link_bio.routes import Route
-from link_bio.styles.styles import Size
-from link_bio.styles.colors import Color
+import mouredev_university.styles.styles as styles
+##from mouredev_university.routes import Route
+from mouredev_university.styles.styles import Size
+from mouredev_university.styles.colors import Color , TextColor
+
+# agregar buscador en el medio del navbar
 
 
 def navbar() -> rx.Component:
     return rx.hstack(
         rx.link(
             rx.box(
-                rx.text("moure", as_="span", color=Color.PRIMARY.value),
+                rx.text("Moure", as_="span", color=Color.PRIMARY.value),
                 rx.text("dev", as_="span", color=Color.SECONDARY.value),
-                style=styles.navbar_title_style
+
+
+                rx.text("University", as_="span", color=Color.PRIMARY.value),
+                style= styles.navbar_title_style
             ),
-            href=Route.INDEX.value
+            ##href=Route.INDEX.value
+        ),
+        #
+         rx.vstack(
+                rx.input(placeholder="¿ Que quieres aprender hoy ?", type="text", style ={
+                    **styles.input_style,
+                    "background-color" : Color.CONTENT.value,
+                    "border-color" : Color.PRIMARY.value,
+                    "color" : TextColor.HEADER.value,
+                    "width" : "300xp",
+                    "::placeholder" : {
+                    "color" : TextColor.HEADER.value
+                    }
+                
+            }),
+            position="sticky",
+            bg=Color.CONTENT.value,
+            padding_x=Size.HUGE.value,
+            top="0",
+            style=styles.input_style
+
         ),
         position="sticky",
         bg=Color.CONTENT.value,
