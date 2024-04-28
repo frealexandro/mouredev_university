@@ -9,7 +9,3 @@ import reflex as rx
 app = rx.App ( stylesheets=styles.STYLESHEETS,
     style=styles.BASE_STYLE,
     )
-
-
-
-
