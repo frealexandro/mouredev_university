@@ -27,7 +27,7 @@ def navbar() -> rx.Component:
                     "background-color" : Color.CONTENT.value,
                     "border-color" : Color.PRIMARY.value,
                     "color" : TextColor.HEADER.value,
-                    "width" : "300xp",
+                    "width" : "30vw",
                     "::placeholder" : {
                     "color" : TextColor.HEADER.value
                     }
@@ -35,7 +35,7 @@ def navbar() -> rx.Component:
             }),
             position="sticky",
             bg=Color.CONTENT.value,
-            padding_x=Size.HUGE.value,
+            padding_x=   "10vw",   #Size.HUGE.value,
             top="0",
             style=styles.input_style
 
