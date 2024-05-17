@@ -1,14 +1,10 @@
 import reflex as rx
 import mouredev_university.styles.styles as styles
 from mouredev_university.components.navbar import navbar
-from mouredev_university.components.button import li
-from mouredev_university.views.index import index
+#from mouredev_university.components.button import li
+from mouredev_university.views.index import side_bar
 
 #import mouredev_university.utils as utils
-
-
-
-
 
 
 
@@ -17,7 +13,7 @@ def index() -> rx.Component:
         rx.script(src="document.documentElement.lang='es'"),
         navbar(),
         rx.flex(
-            index(),
+            side_bar(),
             direction="column",
             align_items="center",
             padding_y=styles.Size.BIG.value
