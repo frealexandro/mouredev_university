@@ -47,5 +47,12 @@ def link_button(title: str,
         ),
         border=f"{'2px' if highlight_color != None else '0px'} solid {highlight_color}",
         class_name=styles.BOUNCEIN_ANIMATION if animated else None,
-        on_click=rx.redirect(path=url, external=is_external)
+        on_click=rx.redirect(path=url, external=is_external),
+        padding=Size.MEDIUM.value,
+        style={
+            'display': 'flex',
+            'align_items': 'center',
+            'justify_content': 'flex-start'  # Alinea horizontalmente al inicio
+        }
     )
+    

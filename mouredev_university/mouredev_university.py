@@ -14,8 +14,9 @@ def index() -> rx.Component:
         navbar(),
         rx.flex(
             side_bar(),
-            direction="column",
-            align_items="center",
+            max_width=styles.MAX_WIDTH,
+            width="100%",
+            margin_x=styles.Size.BIG.value,
             padding_y=styles.Size.BIG.value
         ),
     )

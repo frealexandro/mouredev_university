@@ -8,6 +8,7 @@ from mouredev_university.components.button import link_button
 from mouredev_university.styles.styles import Color
 #from link_bio.state.PageState import PageState
 from mouredev_university.styles.styles import Size 
+from mouredev_university.styles.styles import Spacing
 from mouredev_university.styles import styles
 
 
@@ -23,20 +24,16 @@ def side_bar() -> rx.Component:
                 link_button(
                     "GPT-3",
                     "Interactua con el modelo de lenguaje de OpenAI",
-                    "/mouredev_university/assets/icons/openai.svg",
+                    "/icons/openai-icon-.png",
                     Route.COURSES.value,
                     False,
                     Color.SECONDARY.value,
                 ),
-                max_width=styles.MAX_WIDTH,
-                width="100%",
-                margin_y=Size.BIG.value,
-                padding=Size.BIG.value
             ),
-            direction="column",  # Organizar los elementos en dirección vertical
-            align_items="center",  # Centrar los elementos a lo largo del eje transversal (horizontal)
-            justify_content="center",  # Centrar los elementos a lo largo del eje principal (vertical si direction es "column")
+            direction="column",  # Asegura que los elementos dentro del flex sean apilados verticalmente
+            align_items="stretch",  # Hace que los elementos tomen el ancho completo disponible
+            spacing=Spacing.VERY_SMALL.value,  # Añade espacio entre los elementos del vstack
+            padding=Size.MEDIUM.value,  # Añade padding alrededor del flex  # Centrar los elementos a lo largo del eje principal (vertical si direction es "column")
         ),
-        #footer(),
-        direction="column",  # Ajustar la dirección según sea necesario
+
     )
